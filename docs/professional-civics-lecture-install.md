@@ -5,8 +5,8 @@
 | 平台 | 当前结果 | 下载或管理地址 | 安装方式 |
 | --- | --- | --- | --- |
 | GitHub | 已公开发布，完整14个技能文件 | [技能源码](https://github.com/artminding/SKILLS/tree/main/skills/professional-civics-lecture) · [单技能ZIP下载](https://raw.githubusercontent.com/artminding/SKILLS/main/downloads/professional-civics-lecture-2.8.0.zip) | 下载ZIP后导入支持Agent Skills的客户端；或使用下方命令 |
-| SkillHub.cn | 已提交2.8.0，当前安全审核中；尚未取得公开下载链接 | [我的Skills（作者登录后查看）](https://skillhub.cn/dashboard) | 审核通过后打开技能详情，复制平台生成的安装指令；审核期间请使用GitHub ZIP |
-| WorkBuddy | 已导入本人账户的个人技能库并启用；未完成公开市场上架 | [技能管理](https://www.workbuddy.cn/app/skills) | 专家·技能·连接器 → 技能 → 添加技能 → 上传技能 → 选择ZIP |
+| SkillHub.cn | 2.8.0已审核通过并正式发布 | [技能详情](https://skillhub.cn/skills/user_3e0f26a8/professional-civics-lecture) · [下载ZIP](https://api.skillhub.cn/api/v1/download?slug=%40user_3e0f26a8%2Fprofessional-civics-lecture) | 安装标识为 `@user_3e0f26a8/professional-civics-lecture`，见下方命令 |
+| WorkBuddy | 个人库已导入并启用；公开上架已提交，审核中，平台提示预计7个工作日内出结果 | [个人技能管理](https://www.workbuddy.cn/app/skills) · [开发者审核列表](https://open.workbuddy.cn/skill/all) · [适配包ZIP](https://raw.githubusercontent.com/artminding/SKILLS/main/downloads/professional-civics-lecture-workbuddy-2.8.0.zip) | 审核期间可将适配包导入个人技能库；市场公开安装链接待审核通过后生成 |
 
 WorkBuddy个人库中的当前名称是 `professional-civics-lecture-2.8.0-20261017`，来源于上传文件名。个人库导入不会自动生成公开分享或下载地址。
 
@@ -38,13 +38,29 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/artminding/SKILLS/main
 
 WorkBuddy优先使用界面导入此ZIP。没有核实到该平台官方的独立 `workbuddy install` 命令，不提供猜测命令。
 
-## SkillHub CLI（审核通过后）
+## SkillHub CLI
 
-当前未获得本技能的公开安装标识，因此不提前给出可执行的安装命令。平台官方通用格式为 `skillhub install <技能标识> --dir <目标客户端skills目录>`；请以审核通过后技能详情页提供的实际标识为准。
+需先按[官方安装说明](https://skillhub.cn/install/skillhub.md)安装SkillHub CLI。以下为官方命令格式与本技能公开标识组合的安装命令；尚未在本机执行，以免覆盖已安装版本。
 
-## WorkBuddy公开上架的剩余步骤
+```bash
+# WorkBuddy（macOS/Linux常用路径）
+skillhub install @user_3e0f26a8/professional-civics-lecture --dir ~/.workbuddy/skills
+```
 
-[WorkBuddy开放平台](https://open.workbuddy.cn/)需要单独扫码登录及开发者入驻。当前登录页面提示登录即同意开发者服务协议、隐私保护指引和数据处理协议，需账户本人完成后才能继续提交公开上架。SkillHub实名认证不代表已完成WorkBuddy开放平台入驻。
+```powershell
+# WorkBuddy（Windows PowerShell）
+skillhub install '@user_3e0f26a8/professional-civics-lecture' --dir "$env:USERPROFILE\.workbuddy\skills"
+```
+
+也可将以下文字发给支持安装技能的AI：
+
+> 请根据 https://skillhub.cn/install/skillhub.md ，安装 @user_3e0f26a8/professional-civics-lecture 。
+
+## WorkBuddy发布记录与适配说明
+
+已完成WorkBuddy开放平台提交，技能ID：`os_6c3bdd73a3498654`；版本：2.8.0；价格：免费；市场分类：教育学习；服务类目：教育服务 - 教育信息展示。最终资产列表显示“审核中”，平台提示预计7个工作日内出结果。
+
+公开发布系统仅接受两级目录，因此WorkBuddy适配包将四份专业资料从 `references/programs/` 平移到 `references/`，同步修正引用，并补充平台要求的中英文简介、展示名、作者和版本字段。教学指令与资料内容不变，GitHub源码与SkillHub版本维持原目录结构。
 
 ## 官方操作参考
 
