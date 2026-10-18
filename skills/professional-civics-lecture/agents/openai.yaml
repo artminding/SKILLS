@@ -1,5 +1,5 @@
 interface:
-  display_name: "分专业思政课教学设计"
+  display_name: "分众式·分专业思政课教学设计"
   short_description: "先确认价值观目标与专业学情，再设计分众口播讲稿、互动和课件"
   default_prompt: "请使用 $professional-civics-lecture，先回应我的需求并简短介绍使用流程与可提供材料，再与我确认主题素材、价值观教育目标、专业学情及交付选择，再制作分专业思政课讲稿。"
 
